@@ -1,0 +1,16 @@
+plugins {
+    alias(libs.plugins.kotlinMultiplatform)
+}
+
+kotlin {
+    jvm()
+    linuxX64()
+
+    sourceSets {
+        commonMain {
+            dependencies {
+                implementation(project(":libraryB"))
+            }
+        }
+    }
+}
